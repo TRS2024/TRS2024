@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Count Calculator</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Letter Count Calculator</h2>
+        
+        <!-- Letter count input -->
+        <label for="letterCount">Enter letter count:</label>
+        <input type="number" id="letterCount" placeholder="Enter letter count" required>
+
+        <!-- Dropdown for multiplier -->
+        <label for="multiplier">Select multiplier:</label>
+        <select id="multiplier">
+            <option value="90">90</option>
+            <option value="100">100</option>
+            <option value="110">110</option>
+            <option value="120">120</option>
+            <option value="130">130</option>
+            <option value="140">140</option>
+            <option value="150">150</option>
+        </select>
+
+        <!-- Calculate button -->
+        <button onclick="calculate()">Calculate</button>
+
+        <!-- Results -->
+        <div class="result" id="kgResult"></div>
+        <div class="result" id="price650"></div> <!-- Dynamically updated label for price650 -->
+        <div class="result" id="price640"></div> <!-- Dynamically updated label for price640 -->
+        <div class="result" id="price700"></div> <!-- Dynamically updated label for price700 -->
+        <div class="result" id="price680"></div> <!-- Dynamically updated label for price680 -->
+
+        <!-- Refresh button -->
+        <button class="refresh-btn" onclick="refresh()">Refresh</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+              console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(function(error) {
+              console.log('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+
+</body>
+</html>

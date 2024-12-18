@@ -1,0 +1,76 @@
+/* Apply a gradient background */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Beautiful gradient */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input, select {
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    background-color: #2575fc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6a11cb;
+}
+
+.result {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.result span {
+    font-weight: bold;
+}
+
+/* Refresh button styling */
+.refresh-btn {
+    background-color: #ff5722;
+    color: white;
+    font-size: 16px;
+}
+
+.refresh-btn:hover {
+    background-color: #e64a19;
+}
